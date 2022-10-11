@@ -17,6 +17,7 @@ import {MatMenuModule} from "@angular/material/menu";
 import {ChangePlayerDialogComponent} from "./components/index/change-player-dialog/change-player-dialog.component";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatRadioModule} from "@angular/material/radio";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
 	declarations: [AppComponent, IndexComponent, SetScoreComponent, ChangePlayerDialogComponent],
@@ -38,6 +39,7 @@ import {MatRadioModule} from "@angular/material/radio";
 		MatMenuModule,
 		MatDialogModule,
 		MatRadioModule,
+		ReactiveFormsModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

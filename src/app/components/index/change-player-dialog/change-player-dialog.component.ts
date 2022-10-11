@@ -1,6 +1,8 @@
-import {Component, Inject} from "@angular/core";
+import {Component, Inject, OnInit} from "@angular/core";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {MatButtonToggleChange} from "@angular/material/button-toggle";
+import {ActivatedRoute} from "@angular/router";
+import {tap} from "rxjs/operators";
 
 @Component({
 	selector: 'dialog-overview-example-dialog',
@@ -27,4 +29,6 @@ export class ChangePlayerDialogComponent {
 			player: value
 		})
 	}
+
+
 }

@@ -12,14 +12,14 @@
 
 //region navbar
 nav {
-  // border: 5px solid blue;
-  flex-grow: 0.5;
-  background-color: $primary_color;
-  color: $primary_text_color;
-  display: grid;
-  grid-template-columns: 1fr repeat(1, auto) 1fr;
-  grid-column-gap: 5px;
-  justify-items: center;
+	// border: 5px solid blue;
+	flex-grow: 0.1;
+	background-color: $primary_color;
+	color: $primary_text_color;
+	display: grid;
+	grid-template-columns: 1fr repeat(1, auto) 1fr;
+	//grid-column-gap: 2px;
+	justify-items: center;
 }
 
 nav > div:nth-child(1) {
@@ -85,21 +85,39 @@ nav > .options {
 //endregion
 //region team members and controls
 .team_members_and_tichu_controls {
-  // border: 5px solid purple;
-  flex-grow: 2;
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, auto);
-  grid-row-gap: 15px;
-  grid-column-gap: 10px;
+	// border: 5px solid purple;
+	flex-grow: 2;
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-template-rows: repeat(2, auto);
+	grid-row-gap: 15px;
+	grid-column-gap: 10px;
+	grid-template-areas: "team1p1 team2p1"
+  					   "team1p2 team2p2";
+}
+
+.team_members_and_tichu_controls > .player:nth-child(1) {
+	grid-area: team1p1;
+}
+
+.team_members_and_tichu_controls > .player:nth-child(2) {
+	grid-area: team1p2
+}
+
+.team_members_and_tichu_controls > .player:nth-child(3) {
+	grid-area: team2p1;
+}
+
+.team_members_and_tichu_controls > .player:nth-child(4) {
+	grid-area: team2p2;
 }
 
 .team_members_and_tichu_controls > .player {
-  //border: 2px solid pink;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+	//border: 2px solid pink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 .team_members_and_tichu_controls > .player > .player_top_row {
